@@ -6,7 +6,6 @@
     app:contentPadding="5dp"
     android:layout_margin="5dp"
     app:cardElevation="1dp"
-    android:backgroundTint="@color/transparent"
     android:theme="?attr/cardStyle"
     >
 
