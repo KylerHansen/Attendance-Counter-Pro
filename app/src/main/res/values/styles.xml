@@ -70,6 +70,7 @@
     <style name="darkCardViewStyle" parent="@style/CardView.Dark">
         <item name="android:background">@color/transparent</item>
         <item name="android:textColor">@color/textDarkMode</item>
+        <item name="android:backgroundTint">@color/transparent</item>
     </style>
 
 
