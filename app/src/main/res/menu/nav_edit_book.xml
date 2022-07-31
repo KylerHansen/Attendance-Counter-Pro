@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Create Report"
+        android:id="@+id/mnu_filterCounts"
+        android:icon="@drawable/ic_baseline_filter_alt_24"
+        app:showAsAction="always">
+        <menu>
+            <item android:id="@+id/sort_label" android:title="@string/sort_by"/>
+            <item android:id="@+id/sortTitleAZ" android:title="@string/title_a_z"/>
+            <item android:id="@+id/sortTitleZA" android:title="@string/title_z_a" />
+            <item android:id="@+id/sortDateASC" android:title="@string/date_asc" />
+            <item android:id="@+id/sortDateDSC" android:title="@string/date_dsc" />
+            <item android:id="@+id/sortTotalASC" android:title="@string/total_asc" />
+            <item android:id="@+id/sortTotalDSC" android:title="@string/total_dsc" />
+        </menu>
+    </item>
+
+    <item android:title="@string/create_report"
+        android:id="@+id/mnu_createReport"
+        android:icon="@drawable/ic_baseline_addchart_24"
+        app:showAsAction="always"/>
+
+    <item android:title="@string/add_new_count"
+        android:id="@+id/mnu_createCount"
+        android:icon="@drawable/ic_baseline_add_24"
+        app:showAsAction="always"/>
+
+</menu>

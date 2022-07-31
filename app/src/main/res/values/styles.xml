@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name = "CustomAppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+    </style>
+    <style name = "CustomAppTheme.PopupOverlay" parent="Theme.AppCompat.Light"></style>
+
+<!--Defaults-->
+    <style name="alertDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">#4C4C4C</item>
+    </style>
+
+    <style name="freshThemeSettingsButton" parent="@style/Widget.AppCompat.Button">
+        <item name="android:background">@drawable/theme_button_fresh</item>
+        <item name="android:backgroundTint">@drawable/theme_button_fresh</item>
+    </style>
+<!--End Defaults-->
+
+<!--Fresh Theme-->
+    <style name="FreshTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="backgroundColor">@color/backGroundColor</item>
+        <item name="android:background">@color/backGroundColor</item>
+        <item name="android:backgroundTint">@color/backGroundColor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="buttonStyle">@style/buttonFresh</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="buttonFresh" parent="@style/Widget.AppCompat.Button">
+        <item name="android:background">@drawable/custom_button</item>
+        <item name="android:backgroundTint">@color/colorAccent</item>
+        <item name="android:textColor">@color/backGroundColor</item>
+    </style>
+
+<!-- End Fresh Theme-->
+
+
+<!--Dark Theme-->
+
+    <style name="DarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="android:background">#1B1B1B</item>
+        <item name="backgroundColor">#1B1B1B</item>
+        <item name="colorAccent">@color/textDark</item>
+        <item name="buttonStyle">@style/buttonDark</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textColor">@color/textDark</item>
+        <item name="android:textColorHint">@color/textDark</item>
+        <item name="android:editTextColor">@color/textDark</item>
+        <!--TODO: TRYING TO FIGURE OUT HOW TO CHANGE THE RECCYLER ITEM COLOR CORRECTLY ON BOOK LIST-->
+        <!--todo: consider removing dark theme and doing easier themes instead-->
+    </style>
+
+    <style name="buttonDark" parent="@style/Widget.AppCompat.Button">
+        <item name="android:background">@drawable/custom_button</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/backGroundColor</item>
+    </style>
+
+
+<!--End Dark Theme-->
+
+
+
+</resources>
