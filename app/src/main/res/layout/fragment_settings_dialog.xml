@@ -32,7 +32,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="2.1"
         android:padding="30dp"
         android:orientation="vertical">
 
@@ -55,15 +55,16 @@
             <ImageView
                 android:id="@+id/themeButton_fresh"
                 android:background="@drawable/theme_button_fresh"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:padding="10dp"
+                android:layout_marginEnd="20dp"
             />
 
             <ImageView
                 android:id="@+id/themeButton_dark"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:background="@drawable/theme_button_dark"
                 android:padding="10dp" />
 
