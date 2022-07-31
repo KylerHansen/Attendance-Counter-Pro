@@ -16,7 +16,6 @@
     <color name="errorRed">#FC4A1A</color>
     <color name="backGroundColor">#FFFFFF</color>
     <color name="backgroundColorList">#F3F2F4</color>
-    <color name="textDark">#555555</color>
     <color name="textDarkMode">#A2A2A2</color>
     <color name="transparent">#00000000</color>
 </resources>

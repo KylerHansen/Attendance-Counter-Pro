@@ -11,7 +11,7 @@
         <item name="android:textColor">?attr/alertDialogTextColor</item>
         <item name="android:textColorPrimary">?attr/alertDialogTextPrimaryColor</item>
     </style>
-    
+
 <!--End Defaults-->
 
 <!--Fresh Theme-->
