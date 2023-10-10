@@ -1,5 +1,8 @@
 package com.xzera.counter;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,7 +39,7 @@ public class BookRecyclerViewAdapter extends RecyclerView.Adapter<BookRecyclerVi
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         public View view;
-        //public Book book;
+//        public Book book;
         public TextView txtBookTitle, txtBookDate;
 
         public ViewHolder(@NonNull View itemView){
@@ -108,7 +111,9 @@ public class BookRecyclerViewAdapter extends RecyclerView.Adapter<BookRecyclerVi
                     EditBookDialog editBookDialog = new EditBookDialog();
                     editBookDialog.setArguments(bundle);
 
-                    AppCompatActivity activity = (AppCompatActivity) v.getContext();
+//                     If you remove the theme on the recycler Card View use this instead
+//                    AppCompatActivity activity = (AppCompatActivity) v.getContext()
+                    AppCompatActivity activity = (AppCompatActivity) unwrap(v.getContext());
                     activity.getSupportFragmentManager()
                             .beginTransaction()
                             .replace(android.R.id.content, editBookDialog)
@@ -124,5 +129,13 @@ public class BookRecyclerViewAdapter extends RecyclerView.Adapter<BookRecyclerVi
     @Override
     public int getItemCount() {
         return books.size();
+    }
+
+    private static Activity unwrap(Context context) {
+        while (!(context instanceof Activity) && context instanceof ContextWrapper) {
+            context = ((ContextWrapper) context).getBaseContext();
+        }
+
+        return (Activity) context;
     }
 }

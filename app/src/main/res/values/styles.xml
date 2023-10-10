@@ -6,28 +6,27 @@
     <style name = "CustomAppTheme.PopupOverlay" parent="Theme.AppCompat.Light"></style>
 
 <!--Defaults-->
+
     <style name="alertDialogStyle" parent="Theme.AppCompat.Light.Dialog">
-        <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:textColorPrimary">#4C4C4C</item>
+        <item name="android:textColor">?attr/alertDialogTextColor</item>
+        <item name="android:textColorPrimary">?attr/alertDialogTextPrimaryColor</item>
     </style>
 
-    <style name="freshThemeSettingsButton" parent="@style/Widget.AppCompat.Button">
-        <item name="android:background">@drawable/theme_button_fresh</item>
-        <item name="android:backgroundTint">@drawable/theme_button_fresh</item>
-    </style>
 <!--End Defaults-->
 
 <!--Fresh Theme-->
     <style name="FreshTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="backgroundColor">@color/backGroundColor</item>
         <item name="android:background">@color/backGroundColor</item>
-        <item name="android:backgroundTint">@color/backGroundColor</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="buttonStyle">@style/buttonFresh</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="cardStyle">@style/freshCardViewStyle</item>
+        <item name="alertDialogTextColor">@color/colorPrimary</item>
+        <item name="alertDialogTextPrimaryColor">@color/black</item>
+        <item name="backgroundColorForList">@color/backgroundColorList</item>
     </style>
 
     <style name="buttonFresh" parent="@style/Widget.AppCompat.Button">
@@ -36,6 +35,12 @@
         <item name="android:textColor">@color/backGroundColor</item>
     </style>
 
+    <style name="freshCardViewStyle" parent="@style/CardView.Light">
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+
+
 <!-- End Fresh Theme-->
 
 
@@ -43,18 +48,20 @@
 
     <style name="DarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">#000000</item>
-        <item name="android:background">#1B1B1B</item>
-        <item name="backgroundColor">#1B1B1B</item>
-        <item name="colorAccent">@color/textDark</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="android:background">@color/darkModePrimaryColor</item>
+        <item name="colorAccent">@color/textDarkMode</item>
         <item name="buttonStyle">@style/buttonDark</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:textColor">@color/textDark</item>
-        <item name="android:textColorHint">@color/textDark</item>
-        <item name="android:editTextColor">@color/textDark</item>
-        <!--TODO: TRYING TO FIGURE OUT HOW TO CHANGE THE RECCYLER ITEM COLOR CORRECTLY ON BOOK LIST-->
-        <!--todo: consider removing dark theme and doing easier themes instead-->
+        <item name="android:textColor">@color/textDarkMode</item>
+        <item name="android:textColorHint">@color/textDarkMode</item>
+        <item name="android:editTextColor">@color/textDarkMode</item>
+        <item name="cardStyle">@style/darkCardViewStyle</item>
+        <item name="alertDialogTextColor">@color/colorPrimary</item>
+        <item name="alertDialogTextPrimaryColor">@color/textDarkMode</item>
+        <item name="backgroundColorForList">@color/darkModePrimaryColor</item>
+        <item name="selectBoxStyle">@style/darkSelectBoxStyle</item>
     </style>
 
     <style name="buttonDark" parent="@style/Widget.AppCompat.Button">
@@ -63,6 +70,17 @@
         <item name="android:textColor">@color/backGroundColor</item>
     </style>
 
+    <style name="darkCardViewStyle" parent="@style/CardView.Dark">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textColor">@color/textDarkMode</item>
+        <item name="android:backgroundTint">@color/transparent</item>
+    </style>
+
+    <style name="darkSelectBoxStyle">
+        <item name="android:backgroundTint">@color/backGroundColorListDarkMode</item>
+        <item name="android:textColor">@color/white</item>
+        <!--TODO THIS CONTROLS COLORS IN DROP DOWN OF THE SPINNER NOT SURE HOW TO CHANGE COLOR IN SPINNER INPUT BOX-->
+    </style>
 
 <!--End Dark Theme-->
 

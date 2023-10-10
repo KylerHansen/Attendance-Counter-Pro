@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="cardStyle">
+        <attr name="cardStyle" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="alertDialogTextPrimaryColor">
+        <attr name="alertDialogTextPrimaryColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="alertDialogTextColor">
+        <attr name="alertDialogTextColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="selectBoxStyle">
+        <attr name="selectBoxStyle" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="backgroundColorForList">
+        <attr name="backgroundColorForList" format="color"/>
+    </declare-styleable>
+</resources>
+

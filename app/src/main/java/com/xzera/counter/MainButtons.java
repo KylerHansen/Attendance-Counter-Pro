@@ -93,7 +93,7 @@ public class MainButtons extends Fragment implements CreateNewBookDialog.CreateN
     public boolean checkPermissions(){
 
 
-    //TODO: LEARN HOW TO REQUEST PERMISSION WITH registerForActivityResult()
+    //TODO: LEARN HOW TO REQUEST PERMISSION
     return true;
 
 //        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
