@@ -62,6 +62,7 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 
@@ -122,11 +123,11 @@ public class GraphReportDialog extends DialogFragment {
 
         countList.sort(Count.SortCountDateDESC);
 
-        if(graphType == "Line Graph"){
+        if(Objects.equals(graphType, "Line Graph")){
             ln_chart.setVisibility(View.VISIBLE);
             bar_chart.setVisibility(View.GONE);
 
-        }else if(graphType == "Bar Graph"){
+        }else if(Objects.equals(graphType, "Bar Graph")){
             bar_chart.setVisibility(View.VISIBLE);
             ln_chart.setVisibility(View.GONE);
         }
@@ -141,7 +142,7 @@ public class GraphReportDialog extends DialogFragment {
                 if(countList.get(i).getBook_id() == book.getBook_id()) {
                     int total = countList.get(i).getTotal();
                     bookName = book.getBook_title();
-                    if(graphType == "Line Graph") {
+                    if(Objects.equals(graphType, "Line Graph")) {
 
                         if(xAxisType == 1) {
                             xAxisLabels[i] = countList.get(i).getDate();
@@ -152,7 +153,7 @@ public class GraphReportDialog extends DialogFragment {
                         Entry entry = new Entry(i, total);
                         entries.add(entry);
 
-                    }else if( graphType == "Bar Graph") {
+                    }else if(Objects.equals(graphType, "Bar Graph")) {
                         if(numberOfSelectedBooks > 1){
                             xAxisLabels[i] = "";
                         }else{
@@ -168,16 +169,16 @@ public class GraphReportDialog extends DialogFragment {
                     }
                 }
             }
-            if(graphType == "Line Graph") {
+            if(Objects.equals(graphType, "Line Graph")) {
                 EntriesList listOfEntriesList = new EntriesList(entries, bookName);
                 listOfEntries.add(listOfEntriesList);
-            }else if(graphType == "Bar Graph") {
+            }else if(Objects.equals(graphType, "Bar Graph")) {
                 BarEntriesList listOfBarEntriesList = new BarEntriesList(barEntries, bookName);
                 listOfBarEntries.add(listOfBarEntriesList);
             }
         }
 
-        if(graphType == "Line Graph") {
+        if(Objects.equals(graphType, "Line Graph")) {
             int c = 0;
             for (EntriesList countsOfBook : listOfEntries) {
                 if (c == 3) {
@@ -374,7 +375,7 @@ public class GraphReportDialog extends DialogFragment {
 
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.graph_text_message)+Calendar.getInstance().getTime().toString());
-        Uri uri = FileProvider.getUriForFile(this.getContext(),"com.example.counter", fileScreenShot);
+        Uri uri = FileProvider.getUriForFile(this.getContext(),"com.xzera.counter", fileScreenShot);
         intent.putExtra(Intent.EXTRA_STREAM, uri);
         intent.setType("image/jpeg");
         intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
@@ -441,7 +442,7 @@ public class GraphReportDialog extends DialogFragment {
             fileOutputStream.close();
 
             Intent emailIntent = new Intent(Intent.ACTION_SEND);
-            Uri uri = FileProvider.getUriForFile(this.getContext(),"com.example.counter", filePath);
+            Uri uri = FileProvider.getUriForFile(this.getContext(),"com.xzera.counter", filePath);
             emailIntent.setType("application/excel");
             emailIntent.putExtra(Intent.EXTRA_STREAM, uri);
             emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.Email_Subject_Line));
