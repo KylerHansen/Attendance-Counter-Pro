@@ -26,6 +26,7 @@
         <item name="cardStyle">@style/freshCardViewStyle</item>
         <item name="alertDialogTextColor">@color/colorPrimary</item>
         <item name="alertDialogTextPrimaryColor">@color/black</item>
+        <item name="backgroundColorForList">@color/backgroundColorList</item>
     </style>
 
     <style name="buttonFresh" parent="@style/Widget.AppCompat.Button">
@@ -47,8 +48,8 @@
 
     <style name="DarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">#000000</item>
-        <item name="android:background">#1B1B1B</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="android:background">@color/darkModePrimaryColor</item>
         <item name="colorAccent">@color/textDarkMode</item>
         <item name="buttonStyle">@style/buttonDark</item>
         <item name="windowActionBar">false</item>
@@ -59,6 +60,8 @@
         <item name="cardStyle">@style/darkCardViewStyle</item>
         <item name="alertDialogTextColor">@color/colorPrimary</item>
         <item name="alertDialogTextPrimaryColor">@color/textDarkMode</item>
+        <item name="backgroundColorForList">@color/darkModePrimaryColor</item>
+        <item name="selectBoxStyle">@style/darkSelectBoxStyle</item>
     </style>
 
     <style name="buttonDark" parent="@style/Widget.AppCompat.Button">
@@ -73,6 +76,11 @@
         <item name="android:backgroundTint">@color/transparent</item>
     </style>
 
+    <style name="darkSelectBoxStyle">
+        <item name="android:backgroundTint">@color/backGroundColorListDarkMode</item>
+        <item name="android:textColor">@color/white</item>
+        <!--TODO THIS CONTROLS COLORS IN DROP DOWN OF THE SPINNER NOT SURE HOW TO CHANGE COLOR IN SPINNER INPUT BOX-->
+    </style>
 
 <!--End Dark Theme-->
 

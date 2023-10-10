@@ -44,10 +44,9 @@ public class MainActivity extends AppCompatActivity implements CreateNewBookDial
         toolbar = findViewById(R.id.toolbar_main);
         setSupportActionBar(toolbar);
         fm = getSupportFragmentManager();
-
-            fm.beginTransaction()
-                    .add(R.id.container_mainButtons, new MainButtons(), "MainButtons")
-                    .commit();
+        fm.beginTransaction()
+            .add(R.id.container_mainButtons, new MainButtons(), "MainButtons")
+            .commit();
 
     }
 
@@ -59,23 +58,23 @@ public class MainActivity extends AppCompatActivity implements CreateNewBookDial
      return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull @NotNull MenuItem item) {
-        switch (item.getItemId()){
-
-            case R.id.mnu_main_Settings:
-                fm.beginTransaction()
-                        .replace(android.R.id.content, new SettingsDialog())
-                        .hide(fm.findFragmentById(R.id.container_mainButtons))
-                        .addToBackStack(null)
-                        .commit();
-                break;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull @NotNull MenuItem item) {
+//        switch (item.getItemId()){
+//
+//            case R.id.mnu_main_Settings:
+//                fm.beginTransaction()
+//                        .replace(android.R.id.content, new SettingsDialog())
+//                        .hide(fm.findFragmentById(R.id.container_mainButtons))
+//                       .addToBackStack(null)
+//                        .commit();
+//                break;
+//            default:
+//                return super.onOptionsItemSelected(item);
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//    }
 
 
     @Override

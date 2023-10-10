@@ -12,6 +12,12 @@
         <attr name="alertDialogTextColor" format="color"/>
     </declare-styleable>
 
+    <declare-styleable name="selectBoxStyle">
+        <attr name="selectBoxStyle" format="reference"/>
+    </declare-styleable>
 
+    <declare-styleable name="backgroundColorForList">
+        <attr name="backgroundColorForList" format="color"/>
+    </declare-styleable>
 </resources>
 

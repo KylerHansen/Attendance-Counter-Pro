@@ -79,7 +79,7 @@ public class SettingsDialog extends DialogFragment {
                 audioManager.adjustStreamVolume(AudioManager.STREAM_DTMF,AudioManager.ADJUST_UNMUTE,0);
             }
         });
-
+//TODO: Didn't get this working decided to just turn off the button access to it.
         ButtonDarkTheme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

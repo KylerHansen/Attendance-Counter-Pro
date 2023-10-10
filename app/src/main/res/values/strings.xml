@@ -1,10 +1,9 @@
 <resources>
-    <string name="app_name">Counter</string>
+    <string name="app_name">Attendance Counter Pro</string>
     <string name="start_new_count">Start New Count</string>
     <string name="view_books">View Books</string>
     <string name="create_report">Create Report</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="set_sound_on_click">Toggle Sound Off/On</string>
     <string name="set_vibration_on_click">Toggle Vibration Off/On</string>
     <string name="increment_by_1_10">INCREMENT BY:</string>
@@ -37,9 +36,9 @@
     <string name="total_asc">Total ASC</string>
     <string name="total_dsc">Total DSC</string>
     <string name="add_new_count">Add New Count</string>
-    <string name="Excel_Sheet_Title">Counter Pro Chart</string>
-    <string name="Email_Subject_Line">Counter Pro Export.xls</string>
-    <string name="graph_text_message">\"This Graph was made using Counter Pro on \"</string>
+    <string name="Excel_Sheet_Title">Attendance Counter Pro Chart</string>
+    <string name="Email_Subject_Line">Attendance Counter Pro Export.xls</string>
+    <string name="graph_text_message">\"This Graph was made using Attendance Counter Pro on \"</string>
 
 
 </resources>

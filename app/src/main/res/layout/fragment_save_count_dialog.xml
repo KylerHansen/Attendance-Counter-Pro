@@ -106,20 +106,19 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="@color/backgroundColorList"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="10dp"
+            android:background="?attr/backgroundColorForList"
             >
 
             <Spinner
                 android:id="@+id/spinner_selectBookToSave"
-                android:backgroundTint="@color/colorAccent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:textAlignment="center"
                 android:padding="10dp"
-                />
+                android:textAlignment="center"
+                android:theme="?attr/selectBoxStyle" />
 
         </RelativeLayout>
 
